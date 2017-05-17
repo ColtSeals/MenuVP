@@ -1,4 +1,5 @@
 #!/bin/bash
+
 clear
 echo -e "\033[1;37mFazendo Backup de Usuarios...\033[0m"
 for user in `awk -F : '$3 > 900 { print $1 }' /etc/passwd |grep -v "nobody" |grep -vi polkitd |grep -vi systemd-[a-z] |grep -vi systemd-[0-9]`
@@ -24,5 +25,5 @@ done
 echo " "
 echo -e "\033[1;31mBackup Completo !!!\033[0m"
 echo " "
-echo -e "\033[1;37mAS informações sobre usuarios ficam no arquivo \033[1;31m /etc/VpsPackdir/backup \033[1;37m
+echo -e "\033[1;37mAs informações sobre usuarios ficam no arquivo \033[1;31m /etc/VpsPackdir/backup \033[1;37m
 Guarde os Para uma futura Restauração\033[0m"
