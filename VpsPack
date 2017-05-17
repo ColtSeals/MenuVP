@@ -68,21 +68,21 @@ case $opcao in
   read -p "Limite de Conexoes: " limit
   limit $user $limit;;
  2)
-  Usercreate;;
+  criarusuario;;
  3)
   UserRedefine;;
  4)
-  UserBack;;
+  Backup;;
  5)
   firewall-block;;
  6)
   ResetFirewall;;
  7)
-  install-addhost;;
- 8)
   add-host;;
+ 8)
+  Removerhost;;
  9)
-  Monitoring;;
+  Monitor;;
  10)
   backupusers;; 
  11)
@@ -93,11 +93,11 @@ case $opcao in
  13)
   banner;;
  14)
-  speedtest;;
+  speedtest.py;;
  15)
-  systemdetalhes;;
+  OpenVPN;;
  16)
-  Detalhes;;
+  Ajuda;;
  17)
   Desinstalar;;
  *)
